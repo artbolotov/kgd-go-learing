@@ -1,35 +1,19 @@
 package main
 
 import (
-	"fmt"	
+	"fmt"
+
+	"example.com/m/stud1"
+	"example.com/m/stud2"
 )
 
-const russian = "Russian"
-//const english = "English"
-const englishHelloPrefix = "Hello, "
-const russianHelloPrefix = "Привет, "
 
-func Hello(name string, language string) string {
-	if name == "" {
-		name = "World"
-	}
+func main(){
 
-	if language == russian {
-		return russianHelloPrefix + name 
-	}
-	return greetingPrefix(language) + name
-}
-
-func greetingPrefix(language string) (prefix string){
-	switch language{
-	case russian:
-		return russianHelloPrefix
-	default:
-		return englishHelloPrefix			
-	}
+	// function call package stud1
+	stud1.SayHello()	
 	
-}
-
-func main() {
-	fmt.Println(Hello("Артем", russian)) //
+	// function call package stud2
+	fmt.Println(stud2.Add(4, 5))
+	fmt.Println(stud2.Add(234, 12))
 }
