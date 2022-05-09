@@ -2,11 +2,23 @@ package stud2
 
 import "testing"
 
-func TestAdder(t *testing.T) {
-	sum := Add(2, 2)
-	expected := 4
-
-	if sum != expected {
-		t.Errorf("expected '%d' but got '%d'", expected, sum)
+func TestAddeder(t *testing.T) {
+	assertCorrectMessage := func(t testing.TB, got, want int) {
+		t.Helper()
+		if got != want {
+			t.Errorf("got %q want %q", got, want)
+		}
 	}
+
+	t.Run("test addeder", func(t *testing.T) {
+		sum := Add(2, 2)
+		expected := 4
+		assertCorrectMessage(t, sum, expected)
+	})
+	
+	t.Run("test multiply", func(t *testing.T) {
+		sum := Add(10, 2)
+		expected := 12
+		assertCorrectMessage(t, sum, expected)
+	})
 }
