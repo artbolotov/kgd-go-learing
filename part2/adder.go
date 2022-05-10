@@ -1,4 +1,4 @@
-package stud2
+package part2
 
 func Multiply(x, y int) int {
 	return x*y

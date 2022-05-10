@@ -1,4 +1,4 @@
-package stud1
+package part1
 
 import (
 	"fmt"

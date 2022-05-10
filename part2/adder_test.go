@@ -1,4 +1,4 @@
-package stud2
+package part2
 
 import "testing"
 

@@ -1,4 +1,4 @@
-package stud3
+package part3
 
 func Repeat(character string) string {
 	var repeated string
@@ -11,13 +11,13 @@ func Repeat(character string) string {
 func SumAllNumbers(numbers ...int) int{
 	var sum = 0
 	for _, value := range numbers{
-		sum = sum + value
+		sum +=  value
 	}
 	return sum
 }
 
 func SumPositiveNumbers(numbers ...int) int{
-	var sum = 0
+	sum := 0
 	for _, value := range numbers{
 		if value < 0 {
 			continue	
