@@ -40,4 +40,6 @@ func main(){
 	fmt.Println(part5.Perimeter(rectangle))
 
 	fmt.Println(part5.Rectangle.Area(rectangle))
+	fmt.Println(part5.Shape.Area(part5.Triangle{9.0, 10.0}))
+
 }
