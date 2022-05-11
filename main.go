@@ -7,6 +7,7 @@ import (
 	"example.com/m/part2"
 	"example.com/m/part3"
 	"example.com/m/part4"
+	"example.com/m/part5"
 )
 
 
@@ -33,4 +34,10 @@ func main(){
 	fmt.Println(part4.Sum(slice[:]))
 
 	fmt.Println(part4.SumAllTails(arr[:]))
+
+	// function call package part5
+	rectangle := part5.Rectangle{12, 6}
+	fmt.Println(part5.Perimeter(rectangle))
+
+	fmt.Println(part5.Rectangle.Area(rectangle))
 }
