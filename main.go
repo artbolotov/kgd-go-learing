@@ -9,6 +9,7 @@ import (
 	"example.com/m/part4"
 	"example.com/m/part5"
 	"example.com/m/part6"
+	"example.com/m/part7"
 )
 
 func main() {
@@ -60,9 +61,13 @@ func main() {
 	wallet.Deposit(part6.Bitcoin(20))
 	fmt.Println(wallet.Balance().String())
 
-	wallet.Withdraw(part6.Bitcoin(5))
-	fmt.Println(wallet.Balance().String())
-
+	withdraw := wallet.Withdraw(part6.Bitcoin(50))
+	if withdraw==nil {
+		fmt.Println(wallet.Balance().String())	
+	} else {
+		fmt.Println(withdraw)		
+	}
+	
 	//USD
 	dollar := part6.WalletDol{}
 
@@ -72,4 +77,16 @@ func main() {
 	fmt.Printf("Текущий балланс %d USD\n", dollar.Change(&wallet))
 
 	fmt.Println("***end part 6***")
+
+	// function call package part6
+	dictionary := part7.Dictionary{}
+	word := "test"
+	definition := "this is just a test"
+	dictionary.Add(word, definition)
+	
+	for key, value := range dictionary{
+		fmt.Printf("key: %s \nvalue: %s", key, value)
+	}
+
+	fmt.Println("***end part 7***")
 }
