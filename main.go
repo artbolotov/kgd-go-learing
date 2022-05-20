@@ -2,6 +2,9 @@ package main
 
 import (
 	"fmt"
+	"log"
+	"net/http"
+	"os"
 
 	"example.com/m/part1"
 	"example.com/m/part2"
@@ -10,6 +13,7 @@ import (
 	"example.com/m/part5"
 	"example.com/m/part6"
 	"example.com/m/part7"
+	"example.com/m/part8"
 )
 
 func main() {
@@ -85,8 +89,12 @@ func main() {
 	dictionary.Add(word, definition)
 	
 	for key, value := range dictionary{
-		fmt.Printf("key: %s \nvalue: %s", key, value)
+		fmt.Printf("key: %s \nvalue: %s\n", key, value)
 	}
 
 	fmt.Println("***end part 7***")
+
+	part8.Greet(os.Stdout, "Artem")
+	log.Fatal(http.ListenAndServe(":5000", http.HandlerFunc(part8.MyGreeterHandler)))
+	fmt.Println("***end part 8***")
 }
