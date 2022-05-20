@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"log"
-	"net/http"
+	// "log"
+	// "net/http"
 	"os"
 
 	"example.com/m/part1"
@@ -13,7 +13,8 @@ import (
 	"example.com/m/part5"
 	"example.com/m/part6"
 	"example.com/m/part7"
-	"example.com/m/part8"
+	"example.com/m/part9"
+	//"example.com/m/part8"
 )
 
 func main() {
@@ -66,12 +67,12 @@ func main() {
 	fmt.Println(wallet.Balance().String())
 
 	withdraw := wallet.Withdraw(part6.Bitcoin(50))
-	if withdraw==nil {
-		fmt.Println(wallet.Balance().String())	
+	if withdraw == nil {
+		fmt.Println(wallet.Balance().String())
 	} else {
-		fmt.Println(withdraw)		
+		fmt.Println(withdraw)
 	}
-	
+
 	//USD
 	dollar := part6.WalletDol{}
 
@@ -82,19 +83,27 @@ func main() {
 
 	fmt.Println("***end part 6***")
 
-	// function call package part6
+	// function call package part7
 	dictionary := part7.Dictionary{}
 	word := "test"
 	definition := "this is just a test"
 	dictionary.Add(word, definition)
-	
-	for key, value := range dictionary{
+
+	for key, value := range dictionary {
 		fmt.Printf("key: %s \nvalue: %s\n", key, value)
 	}
 
 	fmt.Println("***end part 7***")
 
-	part8.Greet(os.Stdout, "Artem")
-	log.Fatal(http.ListenAndServe(":5000", http.HandlerFunc(part8.MyGreeterHandler)))
+	// function call package part8
+	// part8.Greet(os.Stdout, "Artem")
+	// log.Fatal(http.ListenAndServe(":5000", http.HandlerFunc(part8.MyGreeterHandler)))
 	fmt.Println("***end part 8***")
+
+	// function call package part9
+
+	part9.Countdown(os.Stdout)
+
+	fmt.Println("***end part 9***")
+
 }
