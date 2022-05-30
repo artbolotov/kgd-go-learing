@@ -4,9 +4,9 @@ import (
 	"fmt"
 	// "log"
 	// "net/http"
-	"os"
 
 	"example.com/m/part1"
+	"example.com/m/part10"
 	"example.com/m/part2"
 	"example.com/m/part3"
 	"example.com/m/part4"
@@ -102,8 +102,11 @@ func main() {
 
 	// function call package part9
 
-	part9.Countdown(os.Stdout)
+	part9.Mocking()
 
-	fmt.Println("***end part 9***")
+	fmt.Println("\n***end part 9***")
 
+	fmt.Println(part10.CheckWebsite("http://yandex.com"))
+	fmt.Println("***end part 10***")
 }
+
