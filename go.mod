@@ -1,4 +1,4 @@
-module example.com/m
+module github.com/kgd-go-learing
 
 go 1.18
 

@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/kgl-go-learing/readme"
+	"github.com/kgd-go-learing/readme"
 )
 
 func Test_parseResult(t *testing.T) {

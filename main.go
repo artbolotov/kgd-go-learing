@@ -2,22 +2,30 @@ package main
 
 import (
 	"fmt"
+	"log"
+	"os/exec"
+	"strings"
+
 	// "log"
 	// "net/http"
 
-	"example.com/m/part1"
-	"example.com/m/part10"
-	"example.com/m/part2"
-	"example.com/m/part3"
-	"example.com/m/part4"
-	"example.com/m/part5"
-	"example.com/m/part6"
-	"example.com/m/part7"
-	"example.com/m/part9"
-	//"example.com/m/part8"
+	"github.com/kgd-go-learing/part1"
+	"github.com/kgd-go-learing/part10"
+	"github.com/kgd-go-learing/part2"
+	"github.com/kgd-go-learing/part3"
+	"github.com/kgd-go-learing/part4"
+	"github.com/kgd-go-learing/part5"
+	"github.com/kgd-go-learing/part6"
+	"github.com/kgd-go-learing/part7"
+	"github.com/kgd-go-learing/part9"
+	//"github.com/kgd-go-learing/part8"
 )
 
+//go:generate go run gen/generate_readme.go
+
 func main() {
+
+	defer checkGenerated()
 
 	// function call package part1
 	part1.SayHello()
@@ -110,3 +118,25 @@ func main() {
 	fmt.Println("***end part 10***")
 }
 
+func checkGenerated(){
+
+	version, err := exec.Command("golangci-lint", "--version").Output()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	if !strings.Contains(string(version), "golangci-lint has version") {
+		log.Fatal("please, install golangci-lint")
+	}
+
+	version, err = exec.Command("git", "version").Output()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	if !strings.Contains(string(version), "git version") {
+		log.Fatal("please, install git")
+	}
+
+	log.Println("Everything installed correct")
+}

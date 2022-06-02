@@ -6,7 +6,7 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/kgl-go-learing/readme"
+	"github.com/kgd-go-learing/readme"
 )
 
 func main() {

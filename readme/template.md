@@ -1,4 +1,4 @@
-# kgl-go-learing
+# kgd-go-learing
 
 [Learn go with tests](https://quii.gitbook.io/learn-go-with-tests/) exercises repository template.
 
