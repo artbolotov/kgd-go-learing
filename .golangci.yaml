@@ -31,4 +31,4 @@ linters-settings:
     sections:
       - standard
       - default
-      - prefix(github.com/golang-learning)
+      - prefix(github.com/kgd-go-learing)
