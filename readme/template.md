@@ -11,7 +11,7 @@ Short bio and motivation in learning golang.
 ### {{.Package}} - {{.TestCoverage}}
 {{.Description}}{{range .Functions}}
 <details>
-  <summary><code>{{.Interface}}</code></summary>
+  <!-- <summary><code>{{.Interface}}</code></summary> -->
 {{range .DocLines}}
     {{.}}{{end}}
 </details>
