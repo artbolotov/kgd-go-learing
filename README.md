@@ -32,6 +32,23 @@ Short bio and motivation in learning golang.
 
 </details>
 
+### iterationgo - 100.0%
+
+<details>
+  <!-- <summary><code>func Repeat(character string) string</code></summary> -->
+
+</details>
+
+<details>
+  <!-- <summary><code>func SumAllNumbers(numbers ...int) int</code></summary> -->
+
+</details>
+
+<details>
+  <!-- <summary><code>func SumPositiveNumbers(numbers ...int) int</code></summary> -->
+
+</details>
+
 ### hellogo - 88.9%
 
 <details>
@@ -50,87 +67,7 @@ Short bio and motivation in learning golang.
   <!-- <summary><code>func CheckWebsites(wc WebsiteChecker, urls []string) map[string]bool</code></summary> -->
 
     TYPES
-</details>
-
-### dependencyinjection - 66.7%
-
-<details>
-  <!-- <summary><code>func Greet(writer io.Writer, name string)</code></summary> -->
-
-</details>
-
-<details>
-  <!-- <summary><code>func MyGreeterHandler(w http.ResponseWriter, r *http.Request)</code></summary> -->
-
-</details>
-
-### iterationgo - 100.0%
-
-<details>
-  <!-- <summary><code>func Repeat(character string) string</code></summary> -->
-
-</details>
-
-<details>
-  <!-- <summary><code>func SumAllNumbers(numbers ...int) int</code></summary> -->
-
-</details>
-
-<details>
-  <!-- <summary><code>func SumPositiveNumbers(numbers ...int) int</code></summary> -->
-
-</details>
-
-### mapgo - 83.3%
-CONSTANTS
-
-const (
-	ErrNotFound         = DictionaryErr("could not find the word you were looking for")
-	ErrWordExists       = DictionaryErr("cannot add word because it already exists")
-	ErrWordDoesNotExist = DictionaryErr("cannot update word because it does not exist")
-)
-
-TYPES
-
-type Dictionary map[string]string
-
-func (d Dictionary) Add(word, definition string) error
-
-func (d Dictionary) Delete(word string)
-
-func (d Dictionary) Search(word string) (string, error)
-
-func (d Dictionary) Update(word, definition string) error
-
-type DictionaryErr string
-
-func (e DictionaryErr) Error() string
-### mockgo - 55.6%
-
-<details>
-  <!-- <summary><code>func Countdown(out io.Writer, sleeper Sleeper)</code></summary> -->
-
-    Countdown prints a countdown from 3 to out.
-</details>
-
-<details>
-  <!-- <summary><code>func Mocking()</code></summary> -->
-
-    TYPES
-    // Has unexported fields.
-    }
-</details>
-
-<details>
-  <!-- <summary><code>func (c *ConfigurableSleeper) Sleep()</code></summary> -->
-
-</details>
-
-<details>
-  <!-- <summary><code>func (d *DefaultSleeper) Sleep()</code></summary> -->
-
-    Sleep()
-    }
+    type WebsiteChecker func(string) bool
 </details>
 
 ### reflectiongo - 100.0%
@@ -171,15 +108,46 @@ func (d *WalletDol) Change(w *Wallet) int
 
 func (d *WalletDol) Insert(amount Dollar)
     dollar
-### selectgo - 90.0%
+### mockgo - 55.6%
 
 <details>
-  <!-- <summary><code>func ConfigurableRacer(a, b string, timeout time.Duration) (winner string, error error)</code></summary> -->
+  <!-- <summary><code>func Countdown(out io.Writer, sleeper Sleeper)</code></summary> -->
+
+    Countdown prints a countdown from 3 to out.
+</details>
+
+<details>
+  <!-- <summary><code>func Mocking()</code></summary> -->
+
+    TYPES
+    type ConfigurableSleeper struct {
+    // Has unexported fields.
+    }
+</details>
+
+<details>
+  <!-- <summary><code>func (c *ConfigurableSleeper) Sleep()</code></summary> -->
+
+    type DefaultSleeper struct{}
+</details>
+
+<details>
+  <!-- <summary><code>func (d *DefaultSleeper) Sleep()</code></summary> -->
+
+    type Sleeper interface {
+    Sleep()
+    }
+</details>
+
+### dependencyinjection - 66.7%
+
+<details>
+  <!-- <summary><code>func Greet(writer io.Writer, name string)</code></summary> -->
 
 </details>
 
 <details>
-  <!-- <summary><code>func Racer(a, b string) (winner string, error error)</code></summary> -->
+  <!-- <summary><code>func MyGreeterHandler(w http.ResponseWriter, r *http.Request)</code></summary> -->
 
 </details>
 
@@ -189,6 +157,7 @@ func (d *WalletDol) Insert(amount Dollar)
   <!-- <summary><code>func Perimeter(rectangle Rectangle) float64</code></summary> -->
 
     TYPES
+    type Circle struct {
     Radius float64
     }
 </details>
@@ -196,6 +165,7 @@ func (d *WalletDol) Insert(amount Dollar)
 <details>
   <!-- <summary><code>func (c Circle) Area() float64</code></summary> -->
 
+    type Rectangle struct {
     Width  float64
     Height float64
     }
@@ -204,8 +174,10 @@ func (d *WalletDol) Insert(amount Dollar)
 <details>
   <!-- <summary><code>func (r Rectangle) Area() float64</code></summary> -->
 
+    type Shape interface {
     Area() float64
     }
+    type Triangle struct {
     Base   float64
     Height float64
     }
@@ -213,5 +185,17 @@ func (d *WalletDol) Insert(amount Dollar)
 
 <details>
   <!-- <summary><code>func (t Triangle) Area() float64</code></summary> -->
+
+</details>
+
+### selectgo - 90.0%
+
+<details>
+  <!-- <summary><code>func ConfigurableRacer(a, b string, timeout time.Duration) (winner string, error error)</code></summary> -->
+
+</details>
+
+<details>
+  <!-- <summary><code>func Racer(a, b string) (winner string, error error)</code></summary> -->
 
 </details>

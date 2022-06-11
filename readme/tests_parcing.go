@@ -2,6 +2,7 @@ package readme
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"strings"
 )
@@ -39,7 +40,21 @@ func GetPackages(commandRunner func(cmd string, args ...string) string) (result 
 		coverage := strings.TrimPrefix(row.Output, "coverage: ")
 		coverage = strings.TrimSuffix(coverage, " of statements\n")
 
+		
 		packageDoc, functions := docs(commandRunner, path)
+
+		a :=strings.HasPrefix(packageDoc, "CONSTANTS")
+		b :=strings.HasPrefix(packageDoc, "TYPES")
+		
+		if a==true {
+			continue
+		}else if b==true{	
+			continue
+		}
+
+		fmt.Println(a)	
+		fmt.Println(b)
+
 
 		result = append(result, Package{
 			Package:      path,
@@ -73,10 +88,6 @@ func docs(commandRunner func(cmd string, args ...string) string, path string) (s
 			continue
 		}
 
-		if strings.HasPrefix(line, "type ") {
-			
-			continue
-		}
 
 		funcs[len(funcs)-1].DocLines = append(funcs[len(funcs)-1].DocLines, line)
 	}
