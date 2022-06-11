@@ -73,6 +73,11 @@ func docs(commandRunner func(cmd string, args ...string) string, path string) (s
 			continue
 		}
 
+		if strings.HasPrefix(line, "type ") {
+			
+			continue
+		}
+
 		funcs[len(funcs)-1].DocLines = append(funcs[len(funcs)-1].DocLines, line)
 	}
 

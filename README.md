@@ -20,6 +20,18 @@ Short bio and motivation in learning golang.
 
 </details>
 
+### integersgo - 100.0%
+
+<details>
+  <!-- <summary><code>func Add(x, y int) int</code></summary> -->
+
+</details>
+
+<details>
+  <!-- <summary><code>func Multiply(x, y int) int</code></summary> -->
+
+</details>
+
 ### hellogo - 88.9%
 
 <details>
@@ -38,7 +50,6 @@ Short bio and motivation in learning golang.
   <!-- <summary><code>func CheckWebsites(wc WebsiteChecker, urls []string) map[string]bool</code></summary> -->
 
     TYPES
-    type WebsiteChecker func(string) bool
 </details>
 
 ### dependencyinjection - 66.7%
@@ -106,7 +117,6 @@ func (e DictionaryErr) Error() string
   <!-- <summary><code>func Mocking()</code></summary> -->
 
     TYPES
-    type ConfigurableSleeper struct {
     // Has unexported fields.
     }
 </details>
@@ -114,16 +124,16 @@ func (e DictionaryErr) Error() string
 <details>
   <!-- <summary><code>func (c *ConfigurableSleeper) Sleep()</code></summary> -->
 
-    type DefaultSleeper struct{}
 </details>
 
 <details>
   <!-- <summary><code>func (d *DefaultSleeper) Sleep()</code></summary> -->
 
-    type Sleeper interface {
     Sleep()
     }
 </details>
+
+### reflectiongo - 100.0%
 
 ### pointersgo - 54.5%
 VARIABLES
@@ -161,45 +171,6 @@ func (d *WalletDol) Change(w *Wallet) int
 
 func (d *WalletDol) Insert(amount Dollar)
     dollar
-### reflectiongo - 100.0%
-
-### structgo - 100.0%
-
-<details>
-  <!-- <summary><code>func Perimeter(rectangle Rectangle) float64</code></summary> -->
-
-    TYPES
-    type Circle struct {
-    Radius float64
-    }
-</details>
-
-<details>
-  <!-- <summary><code>func (c Circle) Area() float64</code></summary> -->
-
-    type Rectangle struct {
-    Width  float64
-    Height float64
-    }
-</details>
-
-<details>
-  <!-- <summary><code>func (r Rectangle) Area() float64</code></summary> -->
-
-    type Shape interface {
-    Area() float64
-    }
-    type Triangle struct {
-    Base   float64
-    Height float64
-    }
-</details>
-
-<details>
-  <!-- <summary><code>func (t Triangle) Area() float64</code></summary> -->
-
-</details>
-
 ### selectgo - 90.0%
 
 <details>
@@ -212,14 +183,35 @@ func (d *WalletDol) Insert(amount Dollar)
 
 </details>
 
-### integersgo - 100.0%
+### structgo - 100.0%
 
 <details>
-  <!-- <summary><code>func Add(x, y int) int</code></summary> -->
+  <!-- <summary><code>func Perimeter(rectangle Rectangle) float64</code></summary> -->
 
+    TYPES
+    Radius float64
+    }
 </details>
 
 <details>
-  <!-- <summary><code>func Multiply(x, y int) int</code></summary> -->
+  <!-- <summary><code>func (c Circle) Area() float64</code></summary> -->
+
+    Width  float64
+    Height float64
+    }
+</details>
+
+<details>
+  <!-- <summary><code>func (r Rectangle) Area() float64</code></summary> -->
+
+    Area() float64
+    }
+    Base   float64
+    Height float64
+    }
+</details>
+
+<details>
+  <!-- <summary><code>func (t Triangle) Area() float64</code></summary> -->
 
 </details>
