@@ -27,18 +27,6 @@ Short bio and motivation in learning golang.
 
 </details>
 
-### integersgo - 100.0%
-
-<details>
-  <!-- <summary><code>func Add(x, y int) int</code></summary> -->
-
-</details>
-
-<details>
-  <!-- <summary><code>func Multiply(x, y int) int</code></summary> -->
-
-</details>
-
 ### concurrencygo - 60.0%
 
 <details>
@@ -49,8 +37,6 @@ Short bio and motivation in learning golang.
 <details>
   <!-- <summary><code>func CheckWebsites(wc WebsiteChecker, urls []string) map[string]bool</code></summary> -->
 
-    TYPES
-    type WebsiteChecker func(string) bool
 </details>
 
 ### dependencyinjection - 66.7%
@@ -82,44 +68,10 @@ Short bio and motivation in learning golang.
 
 </details>
 
-### reflectiongo - 100.0%
+### mapgo - 83.3%
 
 ### pointersgo - 54.5%
-VARIABLES
 
-var ErrInsufficientFunds = errors.New("cannot withdraw, insufficient funds")
-
-TYPES
-
-type Bitcoin int
-
-func (b Bitcoin) String() string
-
-type Dollar int
-
-func (d Dollar) StringDollar() string
-
-type Wallet struct {
-	// Has unexported fields.
-}
-
-func (w *Wallet) Balance() Bitcoin
-
-func (w *Wallet) Deposit(amount Bitcoin)
-
-func (w *Wallet) Withdraw(amount Bitcoin) error
-
-type WalletDol struct {
-	// Has unexported fields.
-}
-
-func (d *WalletDol) BalanceDollar() Dollar
-
-func (d *WalletDol) Change(w *Wallet) int
-    exchange
-
-func (d *WalletDol) Insert(amount Dollar)
-    dollar
 ### mockgo - 55.6%
 
 <details>
@@ -146,9 +98,33 @@ func (d *WalletDol) Insert(amount Dollar)
 <details>
   <!-- <summary><code>func (d *DefaultSleeper) Sleep()</code></summary> -->
 
-    type Sleeper interface {
-    Sleep()
-    }
+  
+</details>
+
+### reflectiongo - 100.0%
+
+### syncgo - 80.0%
+
+### structgo - 100.0%
+
+<details>
+  <!-- <summary><code>func Perimeter(rectangle Rectangle) float64</code></summary> -->
+
+</details>
+
+<details>
+  <!-- <summary><code>func (c Circle) Area() float64</code></summary> -->
+
+</details>
+
+<details>
+  <!-- <summary><code>func (r Rectangle) Area() float64</code></summary> -->
+
+</details>
+
+<details>
+  <!-- <summary><code>func (t Triangle) Area() float64</code></summary> -->
+
 </details>
 
 ### selectgo - 90.0%
@@ -163,39 +139,14 @@ func (d *WalletDol) Insert(amount Dollar)
 
 </details>
 
-### structgo - 100.0%
+### integersgo - 100.0%
 
 <details>
-  <!-- <summary><code>func Perimeter(rectangle Rectangle) float64</code></summary> -->
+  <!-- <summary><code>func Add(x, y int) int</code></summary> -->
 
-    TYPES
-    type Circle struct {
-    Radius float64
-    }
 </details>
 
 <details>
-  <!-- <summary><code>func (c Circle) Area() float64</code></summary> -->
-
-    type Rectangle struct {
-    Width  float64
-    Height float64
-    }
-</details>
-
-<details>
-  <!-- <summary><code>func (r Rectangle) Area() float64</code></summary> -->
-
-    type Shape interface {
-    Area() float64
-    }
-    type Triangle struct {
-    Base   float64
-    Height float64
-    }
-</details>
-
-<details>
-  <!-- <summary><code>func (t Triangle) Area() float64</code></summary> -->
+  <!-- <summary><code>func Multiply(x, y int) int</code></summary> -->
 
 </details>
