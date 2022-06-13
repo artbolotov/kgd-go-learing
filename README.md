@@ -20,6 +20,13 @@ Short bio and motivation in learning golang.
 
 </details>
 
+### hellogo - 88.9%
+
+<details>
+  <!-- <summary><code>func SayHello()</code></summary> -->
+
+</details>
+
 ### integersgo - 100.0%
 
 <details>
@@ -29,6 +36,32 @@ Short bio and motivation in learning golang.
 
 <details>
   <!-- <summary><code>func Multiply(x, y int) int</code></summary> -->
+
+</details>
+
+### concurrencygo - 60.0%
+
+<details>
+  <!-- <summary><code>func CheckWebsite(url string) bool</code></summary> -->
+
+</details>
+
+<details>
+  <!-- <summary><code>func CheckWebsites(wc WebsiteChecker, urls []string) map[string]bool</code></summary> -->
+
+    TYPES
+    type WebsiteChecker func(string) bool
+</details>
+
+### dependencyinjection - 66.7%
+
+<details>
+  <!-- <summary><code>func Greet(writer io.Writer, name string)</code></summary> -->
+
+</details>
+
+<details>
+  <!-- <summary><code>func MyGreeterHandler(w http.ResponseWriter, r *http.Request)</code></summary> -->
 
 </details>
 
@@ -47,27 +80,6 @@ Short bio and motivation in learning golang.
 <details>
   <!-- <summary><code>func SumPositiveNumbers(numbers ...int) int</code></summary> -->
 
-</details>
-
-### hellogo - 88.9%
-
-<details>
-  <!-- <summary><code>func SayHello()</code></summary> -->
-
-</details>
-
-### concurrencygo - 60.0%
-
-<details>
-  <!-- <summary><code>func CheckWebsite(url string) bool</code></summary> -->
-
-</details>
-
-<details>
-  <!-- <summary><code>func CheckWebsites(wc WebsiteChecker, urls []string) map[string]bool</code></summary> -->
-
-    TYPES
-    type WebsiteChecker func(string) bool
 </details>
 
 ### reflectiongo - 100.0%
@@ -139,15 +151,15 @@ func (d *WalletDol) Insert(amount Dollar)
     }
 </details>
 
-### dependencyinjection - 66.7%
+### selectgo - 90.0%
 
 <details>
-  <!-- <summary><code>func Greet(writer io.Writer, name string)</code></summary> -->
+  <!-- <summary><code>func ConfigurableRacer(a, b string, timeout time.Duration) (winner string, error error)</code></summary> -->
 
 </details>
 
 <details>
-  <!-- <summary><code>func MyGreeterHandler(w http.ResponseWriter, r *http.Request)</code></summary> -->
+  <!-- <summary><code>func Racer(a, b string) (winner string, error error)</code></summary> -->
 
 </details>
 
@@ -185,17 +197,5 @@ func (d *WalletDol) Insert(amount Dollar)
 
 <details>
   <!-- <summary><code>func (t Triangle) Area() float64</code></summary> -->
-
-</details>
-
-### selectgo - 90.0%
-
-<details>
-  <!-- <summary><code>func ConfigurableRacer(a, b string, timeout time.Duration) (winner string, error error)</code></summary> -->
-
-</details>
-
-<details>
-  <!-- <summary><code>func Racer(a, b string) (winner string, error error)</code></summary> -->
 
 </details>

@@ -43,19 +43,6 @@ func GetPackages(commandRunner func(cmd string, args ...string) string) (result 
 		
 		packageDoc, functions := docs(commandRunner, path)
 
-		a :=strings.HasPrefix(packageDoc, "CONSTANTS")
-		b :=strings.HasPrefix(packageDoc, "TYPES")
-		
-		if a==true {
-			continue
-		}else if b==true{	
-			continue
-		}
-
-		fmt.Println(a)	
-		fmt.Println(b)
-
-
 		result = append(result, Package{
 			Package:      path,
 			TestCoverage: coverage,
@@ -70,6 +57,12 @@ func GetPackages(commandRunner func(cmd string, args ...string) string) (result 
 func docs(commandRunner func(cmd string, args ...string) string, path string) (string, []Function) {
 	doc := commandRunner("go", "doc", "-all", "-short", path)
 	packageDoc, funcsDoc, _ := strings.Cut(doc, "FUNCTIONS")
+
+	a :=strings.HasPrefix(packageDoc, "CONSTANTS")
+	b :=strings.HasPrefix(packageDoc, "TYPES")
+
+	fmt.Println(a)	
+	fmt.Println(b)
 
 	funcsDoc = strings.TrimSpace(funcsDoc)
 
